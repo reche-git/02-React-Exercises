@@ -103,41 +103,38 @@ export const CrudApi = () => {
       <h2>CRUD API</h2>
 
       <button className="btn btn-primary btn-lg" onClick={openModal}>
-        About Crud App
+        About Crud API
       </button>
       <Modal isOpen={isOpen} closeModal={closeModal}>
         <div className="ExplinationModal">
-          <h3>About CRUD App</h3>
-          <p>This is a project that applies the 4 operations in a CRUD:</p>
-          <p style={{ textAlign: "center" }}>
-            <b>Create - Read - Update - Delete</b>
-          </p>
+          <h3>About CRUD API</h3>
           <p>
-            The data is not stored and is going to be reseted to an initial
-            state after a page reload, so feel free to add whatever you want.
+            This project is a copy of the last exercise with the addition of
+            asynchronous calls to an api thanks to a custom fetch hook.
           </p>
           <hr />
-          <p>
-            This project has a total of three components, all with "CRUD" as a
-            prefix to make it ease for others to undertand the source code.
-          </p>
+          <p>The special about this is the use of:</p>
           <ul>
             <li>
-              CrudApp: This component holds 3 arrow functions that holds the
-              CRUD logic with 3 states to control the data, the edition of data
-              and the Modal.
+              A personalized hook made entirely on JavaScript. Witch means the
+              compatibility with allo JS Frameworks (Vue, Angular, Ruby, etc.).
             </li>
             <li>
-              CrudForm: A form from witch you are able to add the name and type
-              of the pokemon. You can find here the logic to send the
-              information to the parent component and the reset of the entire
-              form.
+              The reuse of the previous Components to make the project more
+              dynamic and less resource consuming.
             </li>
             <li>
-              CrudTable: It's a simple table made to display the data and two
-              buttons that will edit or delete the row.
+              The management of the fetch response as an object with three
+              properties, the data, the error and an state variable that will
+              manage the state of our loader.
             </li>
           </ul>
+          <hr />
+          <p>
+            Unfortunely I was unable to find a way to create a server to storage
+            the data to fetch. But in the next section (Song Search) I use the
+            same hook with two free APIs.
+          </p>
         </div>
       </Modal>
       <article className="grid-1-2">
