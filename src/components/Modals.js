@@ -7,7 +7,6 @@ import ModalPortal from "./ModalPortal";
 
 const Modals = () => {
   const [isOpenModal1, openModal1, closeModal1] = useModal(false);
-  const [isOpenModal2, openModal2, closeModal2] = useModal(false);
   const [isOpenContact, openContact, closeContact] = useModal(false);
   const [isOpenSong, openModalSong, closeModalSong] = useModal(false);
   const [isOpenPortal, openModalPortal, closeModalPortal] = useModal(false);
@@ -17,20 +16,31 @@ const Modals = () => {
       <h2>Modals</h2>
       <button onClick={openModal1}>Modal 1</button>
       <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
-        <h3>Modal 1</h3>
-        <p>Hola, este es el contenido de mi modal 1</p>
-        <img src="https://placeimg.com/400/400/animals" alt="animals" />
-      </Modal>
-      <button onClick={openModal2}>Modal 2</button>
-      <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
-        <h3>Otro Modal</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-          reiciendis exercitationem magnam fuga fugiat doloremque perspiciatis
-          cumque sed optio odio provident, placeat est ipsa porro at totam
-          maiores nihil rerum!
-        </p>
-        <img src="https://placeimg.com/400/400/nature" alt="nature" />
+        <div className="ExplinationModal">
+          <h3>
+            Well Well Well... if it isn't a Modal made with a personal hook!
+          </h3>
+          <p>
+            This Modal was made as part of a class to explain the use of hooks
+            and personalised hooks.
+          </p>
+          <p>In this first section you will find:</p>
+          <ul>
+            <li>A simple use of hooks to create a Modal</li>
+            <li>
+              How simple is to pass components inside Modals. Modal Contact and
+              Modal Song do that!
+            </li>
+            <li>
+              The use of Portals. Before Fluix, Reflux and Redux, you could pass
+              properties and logic through Portals! Since React reads in
+              sequence from father to child, passing a prop from a gran gran
+              gran gran gran father to a gran gran gran gran gran child would be
+              to verbose without portals.
+            </li>
+          </ul>
+          <p>Be sure to check all sections and modals!</p>
+        </div>
       </Modal>
       <button onClick={openContact}>Modal Contact</button>
       <Modal isOpen={isOpenContact} closeModal={closeContact}>
