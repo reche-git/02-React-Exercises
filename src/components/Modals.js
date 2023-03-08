@@ -45,10 +45,14 @@ const Modals = () => {
       <button onClick={openContact}>Modal Contact</button>
       <Modal isOpen={isOpenContact} closeModal={closeContact}>
         <ContactForm />
+        <p>
+          <b>psst! The last section is about this form. Go there.</b>
+        </p>
       </Modal>
       <button onClick={openModalSong}>Modal Song</button>
       <Modal isOpen={isOpenSong} closeModal={closeModalSong}>
         <SongSearch />
+        (forth section) <br /> <br />
       </Modal>
       <button onClick={openModalPortal}>Modal in Portal</button>
       <ModalPortal isOpen={isOpenPortal} closeModal={closeModalPortal}>
