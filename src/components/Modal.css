@@ -64,6 +64,10 @@
   margin-top: 10px;
 }
 
+.ExplinationModal a {
+  color: #08e200;
+}
+
 .ExplinationModalBtn {
   appearance: none;
   background: transparent;
