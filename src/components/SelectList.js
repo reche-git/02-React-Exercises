@@ -18,16 +18,14 @@ export const SelectList = ({ title, url, handleChange }) => {
   }
 
   let id = `select-${title}`;
-  let label = title.charAt(0).toUpperCase() + title.slice(1);
   let options = data.response[title];
   // console.log(options);
 
   return (
     <>
-      <label htmlFor={id}>{label}</label>
       {loading && <Loader />}
       <select name={id} id={id} onChange={handleChange}>
-        <option value="">Search a {title}</option>
+        <option value="">Location</option>
         {data && options.map((el) => <option value={el} key={el}>{el}</option>)}
       </select>
     </>

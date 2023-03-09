@@ -98,10 +98,13 @@ export const SongSearch = () => {
               </a>
               {""}: allows you to find the lyrics for a song quickly and without
               ads. This API doesn't allow free calls anymore. So we are using it
-              to show the custom error made in the hook "hookFetch"!
+              to show the custom{" "}
+              <mark style={{ backgroundColor: "#ff0000" }}>error</mark> made in
+              the hook "hookFetch"!
             </li>
           </ul>
           <hr />
+          <p></p>
         </div>
       </Modal>
       <article className="grid-1-3">

@@ -1,15 +1,48 @@
 import { useState } from "react";
+import { useModal } from "../hooks/useModal";
+import Modal from "./Modal";
 import { SelectList } from "./SelectList";
 
 export const SelectsAnidados = () => {
   const [state, setState] = useState("");
   const [town, setTown] = useState("");
   const [suburb, setSuburb] = useState("");
+  const [isOpen, openModal, closeModal] = useModal(false);
 
   return (
     <div>
-      <h2>Selecs Anidados</h2>
-      <h3>México</h3>
+      <h2>Nested Selects</h2>
+
+      <button className="btn btn-primary btn-lg" onClick={openModal}>
+        About Crud API
+      </button>
+      <Modal isOpen={isOpen} closeModal={closeModal}>
+        <div className="ExplinationModal">
+          <h3>About Nested Selects</h3>
+          <p>This section is why the hookFetch was made!</p>
+          <hr />
+          <p>
+            Thanks to{" "}
+            <a
+              href="https://api.copomex.com/documentacion/inicio"
+              rel="noreferrer"
+              target="_blank"
+            >
+              COPOMEX API
+            </a>{" "}
+            free service, you can search for states in mexico, the towns in said
+            state and the suburb in said town.
+          </p>
+          <hr />
+          <p>
+            Thanks to the use of hooks, we can do three API calls with one piece
+            of code. No need to write three fetch functions slightly different.
+          </p>
+          <p>As free service, </p>
+        </div>
+      </Modal>
+      <h3>Search!</h3>
+      <label>State:</label>
       <SelectList
         title="estado"
         url="https://api.copomex.com/query/get_estados?token=pruebas"
@@ -18,26 +51,33 @@ export const SelectsAnidados = () => {
         }}
       />
       {state && (
-        <SelectList
-          title="municipios"
-          url={`https://api.copomex.com/query/get_municipio_por_estado/${state}?token=pruebas`}
-          handleChange={(e) => {
-            setTown(e.target.value);
-          }}
-        />
+        <>
+          <label>Towns</label>
+          <SelectList
+            title="municipios"
+            url={`https://api.copomex.com/query/get_municipio_por_estado/${state}?token=pruebas`}
+            handleChange={(e) => {
+              setTown(e.target.value);
+            }}
+          />
+        </>
       )}
       {town && (
-        <SelectList
-          title="colonia"
-          url={`https://api.copomex.com/query/get_colonia_por_municipio/${town}?token=pruebas`}
-          handleChange={(e) => {
-            setSuburb(e.target.value);
-          }}
-        />
+        <>
+          <label>Suburbs</label>
+          <SelectList
+            title="colonia"
+            url={`https://api.copomex.com/query/get_colonia_por_municipio/${town}?token=pruebas`}
+            handleChange={(e) => {
+              setSuburb(e.target.value);
+            }}
+          />
+        </>
       )}
+      <br />
       <pre>
         <code>
-          {state} - {town} - {suburb}
+          Path: {state} - {town} - {suburb}
         </code>
       </pre>
     </div>
