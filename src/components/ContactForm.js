@@ -1,7 +1,9 @@
 import React from "react";
 import { useForm } from "../hooks/useForm";
-import {Loader} from "./Loader"
-import {Message} from "./Message"
+import { useModal } from "../hooks/useModal";
+import { Loader } from "./Loader";
+import { Message } from "./Message";
+import Modal from "./Modal";
 
 const initialForm = {
   name: "",
@@ -30,15 +32,13 @@ const validationsForm = (form) => {
 
   if (!form.subject.trim()) {
     errors.subject = "This subject is requiered.";
-  } 
+  }
 
   if (!form.comments.trim()) {
     errors.comments = "This subject is requiered.";
   } else if (!regexComments.test(form.comments.trim())) {
     errors.comments = "You can't exceed the 255 characters";
   }
-
-  
 
   return errors;
 };
@@ -58,10 +58,42 @@ const ContactForm = () => {
     handleSubmit,
     handleChange,
   } = useForm(initialForm, validationsForm);
+  const [isOpen, openModal, closeModal] = useModal(false);
 
   return (
     <div>
       <h2>Contact Form</h2>
+      <button className="btn btn-primary btn-lg" onClick={openModal}>
+        About Contact Form
+      </button>
+      <Modal isOpen={isOpen} closeModal={closeModal}>
+        <div className="ExplinationModal">
+          <h3>About Nested Selects</h3>
+          <p>Enough with useFetch, now introducing useForm!</p>
+          <hr />
+          <p>
+            Thanks to{" "}
+            <a href="https://formsubmit.co/" rel="noreferrer" target="_blank">
+              FormSubmit
+            </a>
+            , you can use his form endpoint to send emails without PHP,
+            Javascript or any backend code required.
+          </p>
+          <hr />
+          <p>
+            The email that you put in the email input would be the email where
+            this form would be sent. First you will recieve an email from
+            FormSubmit asking if they can use your email in the first place, like this:
+          </p>
+          <img src="" alt="" />
+          <hr />
+          <p>
+            As a plus, I reuse 3 times the same select component! So much reused
+            things 😲
+          </p>
+          <br />
+        </div>
+      </Modal>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -107,7 +139,9 @@ const ContactForm = () => {
         <input type="submit" value="Send" />
       </form>
       {loading && <Loader />}
-      {response && <Message msg="Form Submited! Check your email" bgColor="#198754"/>}
+      {response && (
+        <Message msg="Form Submited! Check your email" bgColor="#198754" />
+      )}
     </div>
   );
 };

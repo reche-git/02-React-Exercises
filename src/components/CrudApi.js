@@ -118,7 +118,7 @@ export const CrudApi = () => {
             <li>
               A personalized hook made entirely on JavaScript{" "}
               <a href="https://github.com/reche-git/02-React-Exercises/tree/master/src/hooks" rel="noreferrer" target="_blank">
-                "hookFetch"
+                "useFetch"
               </a>
               . Witch means the compatibility with allo JS Frameworks (Vue,
               Angular, Ruby, etc.).

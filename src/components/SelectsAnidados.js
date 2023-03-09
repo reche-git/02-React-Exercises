@@ -12,14 +12,13 @@ export const SelectsAnidados = () => {
   return (
     <div>
       <h2>Nested Selects</h2>
-
       <button className="btn btn-primary btn-lg" onClick={openModal}>
         About Crud API
       </button>
       <Modal isOpen={isOpen} closeModal={closeModal}>
         <div className="ExplinationModal">
           <h3>About Nested Selects</h3>
-          <p>This section is why the hookFetch was made!</p>
+          <p>This section is why the useFetch was made!</p>
           <hr />
           <p>
             Thanks to{" "}

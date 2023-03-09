@@ -69,7 +69,7 @@ export const SongSearch = () => {
               rel="noreferrer"
               target="_blank"
             >
-              "hookFetch"
+              "useFetch"
             </a>{" "}
             in action!
           </p>
@@ -100,7 +100,7 @@ export const SongSearch = () => {
               ads. This API doesn't allow free calls anymore. So we are using it
               to show the custom{" "}
               <mark style={{ backgroundColor: "#ff0000" }}>error</mark> made in
-              the hook "hookFetch"!
+              the hook "useFetch"!
             </li>
           </ul>
           <hr />
