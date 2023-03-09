@@ -43,6 +43,12 @@ export const SelectsAnidados = () => {
             responses for every state, town and suburb. Every search will throw
             different responses!
           </p>
+          <hr />
+          <p>
+            As a plus, I reuse 3 times the same select component! So much reused
+            things 😲
+          </p>
+          <br />
         </div>
       </Modal>
       <h3>Search!</h3>
