@@ -29,16 +29,20 @@ export const SelectsAnidados = () => {
               target="_blank"
             >
               COPOMEX API
-            </a>{" "}
-            free service, you can search for states in mexico, the towns in said
-            state and the suburb in said town.
+            </a>
+            , you can search for states in mexico, the towns in said state and
+            the suburb in said town.
           </p>
           <hr />
           <p>
             Thanks to the use of hooks, we can do three API calls with one piece
             of code. No need to write three fetch functions slightly different.
           </p>
-          <p>As free service, </p>
+          <p>
+            As free service, they provide a dummy server with different
+            responses for every state, town and suburb. Every search will throw
+            different responses!
+          </p>
         </div>
       </Modal>
       <h3>Search!</h3>
