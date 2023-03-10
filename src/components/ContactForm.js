@@ -69,7 +69,17 @@ const ContactForm = () => {
       </button>
       <Modal isOpen={isOpen} closeModal={closeModal}>
         <div className="ExplinationModal">
-          <h3>About Nested Selects with useForm</h3>
+          <h3>
+            About Nested Selects with useForm{" "}
+            <a
+              href="https://github.com/reche-git/02-React-Exercises/tree/master/src/hooks"
+              rel="noreferrer"
+              target="_blank"
+            >
+              useForm
+            </a>{" "}
+            hook
+          </h3>
           <p>
             Thanks to{" "}
             <a href="https://formsubmit.co/" rel="noreferrer" target="_blank">
@@ -80,13 +90,13 @@ const ContactForm = () => {
           </p>
           <hr />
           <p>
-            The email that you put in the email input would be the email where
-            this form would be sent. First you will recieve an email from
+            The email that you put in the input would be the email where
+            this form would be sent (so you can see that it work in a practical way). First you will recieve an email from
             FormSubmit asking if they can use your email in the first place,
             like this:
           </p>
           <img src={FormMail1} alt="MailAccept" />
-          <p>And then the form will appear in your inbox!</p>
+          <p>And then the form that you had sent will appear in your inbox as an email!</p>
           <hr />
           <p>
             As a plus, I reuse 3 times the same select component! So much reused
