@@ -40,6 +40,10 @@ const Modals = () => {
             </li>
           </ul>
           <p>Be sure to check all sections and modals!</p>
+          <p>
+            By the way, I made it so you can scroll on big modals but the scroll
+            bar will be hidden. I'm very proud of myself about that :)
+          </p>
         </div>
       </Modal>
       <button onClick={openContact}>Modal Contact</button>

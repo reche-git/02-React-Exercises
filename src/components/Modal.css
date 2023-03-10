@@ -15,7 +15,6 @@
 .modal.is-open {
   display: flex;
 }
-
 .modal-container {
   position: relative;
   padding: 2rem 4rem;
@@ -30,9 +29,16 @@
   min-width: 320px;
   max-width: 600px;
   min-height: 320px;
-  max-height: auto;
+  max-height: 700px;
   overflow-y: hidden;
   border-radius: 25px;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.modal-container::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 .modal-close {
