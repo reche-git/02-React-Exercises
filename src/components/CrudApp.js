@@ -60,7 +60,7 @@ export const CrudApp = () => {
   };
 
   return (
-    <div>
+    <div className="ComponentContainer">
       <h2>CRUD App</h2>
       <button className="btn btn-primary btn-lg" onClick={openModal}>
         About Crud App

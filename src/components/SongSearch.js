@@ -53,7 +53,7 @@ export const SongSearch = () => {
   };
 
   return (
-    <div>
+    <div className="ComponentContainer">
       <h2>Song Search</h2>
 
       <button className="btn btn-primary btn-lg" onClick={openModal}>

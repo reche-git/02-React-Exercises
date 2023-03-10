@@ -12,7 +12,7 @@ const Modals = () => {
   const [isOpenPortal, openModalPortal, closeModalPortal] = useModal(false);
 
   return (
-    <div>
+    <div className="ComponentContainer">
       <h2>Modals</h2>
       <button onClick={openModal1}>Modal 1</button>
       <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
@@ -26,7 +26,17 @@ const Modals = () => {
           </p>
           <p>In this first section you will find:</p>
           <ul>
-            <li>A simple use of hooks to create a Modal</li>
+            <li>
+              A simple use of hooks to create a Modal{" "}
+              <a
+                href="https://github.com/reche-git/02-React-Exercises/tree/master/src/hooks"
+                rel="noreferrer"
+                target="_blank"
+              >
+                (check them on Github){" "}
+              </a>
+              .
+            </li>
             <li>
               How simple is to pass components inside Modals. Modal Contact and
               Modal Song do that!

@@ -12,10 +12,14 @@ html {
   box-sizing: inherit;
 }
 
+.ComponentContainer {
+  margin: 1rem;
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
-  border: thin solid #dedede;
+  border: thin solid rgb(69, 252, 252);
   border-radius: 0.25rem;
   padding: 0.75rem;
   margin-bottom: 1rem;
@@ -27,6 +31,18 @@ textarea {
   background-color: transparent;
 }
 
+input[type="text"]::placeholder {
+  color: rgb(42, 19, 141);
+}
+
+input[type="email"]::placeholder {
+  color: rgb(42, 19, 141);
+}
+
+textarea::placeholder {
+  color: rgb(42, 19, 141);
+}
+
 textarea {
   font-family: inherit;
   resize: none;
@@ -35,13 +51,13 @@ textarea {
 button,
 input[type="submit"],
 input[type="reset"] {
-  border: thinsolid #444;
-  border-radius: 0.25rem;
+  border: 2px solid rgb(42, 19, 141);
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  margin: 0 0.5rem 0 0;
+  margin: 0 0.5rem 1rem 0;
   display: inline-block;
-  background-color: #eee;
-  color: #444;
+  background-color: #28fcf1;
+  color: rgb(42, 19, 141);
   font-weight: bold;
   font-size: 1rem;
   line-height: 1;
@@ -50,6 +66,12 @@ input[type="reset"] {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+}
+
+button:hover {
+  background: #51fff6;
+  box-shadow: inset 0px 0px 5px #007c76;
+  outline: none;
 }
 
 form {
@@ -76,7 +98,7 @@ label {
 }
 
 select {
-  border: thin solid #dedede;
+  border: thin solid rgb(69, 252, 252);
   border-radius: 0.25rem;
   padding: 0.5rem;
   margin: 0 0 0.5rem 0;

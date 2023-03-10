@@ -99,7 +99,7 @@ export const CrudApi = () => {
   };
 
   return (
-    <div>
+    <div className="ComponentContainer">
       <h2>CRUD API</h2>
 
       <button className="btn btn-primary btn-lg" onClick={openModal}>

@@ -10,7 +10,7 @@ export const SelectsAnidados = () => {
   const [isOpen, openModal, closeModal] = useModal(false);
 
   return (
-    <div>
+    <div className="ComponentContainer">
       <h2>Nested Selects</h2>
       <button className="btn btn-primary btn-lg" onClick={openModal}>
         About Crud API
