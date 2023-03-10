@@ -4,6 +4,7 @@ import { useModal } from "../hooks/useModal";
 import { Loader } from "./Loader";
 import { Message } from "./Message";
 import Modal from "./Modal";
+import FormMail1 from "../assets/FormMail1.png";
 
 const initialForm = {
   name: "",
@@ -68,9 +69,7 @@ const ContactForm = () => {
       </button>
       <Modal isOpen={isOpen} closeModal={closeModal}>
         <div className="ExplinationModal">
-          <h3>About Nested Selects</h3>
-          <p>Enough with useFetch, now introducing useForm!</p>
-          <hr />
+          <h3>About Nested Selects with useForm</h3>
           <p>
             Thanks to{" "}
             <a href="https://formsubmit.co/" rel="noreferrer" target="_blank">
@@ -83,13 +82,15 @@ const ContactForm = () => {
           <p>
             The email that you put in the email input would be the email where
             this form would be sent. First you will recieve an email from
-            FormSubmit asking if they can use your email in the first place, like this:
+            FormSubmit asking if they can use your email in the first place,
+            like this:
           </p>
-          <img src="" alt="" />
+          <img src={FormMail1} alt="MailAccept" />
+          <p>And then the form will appear in your inbox!</p>
           <hr />
           <p>
             As a plus, I reuse 3 times the same select component! So much reused
-            things 😲
+            components 😲
           </p>
           <br />
         </div>
