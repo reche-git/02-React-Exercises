@@ -21,6 +21,14 @@ function App() {
       <SelectsAnidados />
       <hr />
       <ContactForm />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 }
