@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <h1>Ejercicios con React</h1>
+      <hr />
       <Modals />
       <hr />
       <CrudApp />
