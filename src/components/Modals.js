@@ -4,6 +4,7 @@ import Modal from "./Modal";
 import ContactForm from "./ContactForm";
 import { SongSearch } from "./SongSearch";
 import ModalPortal from "./ModalPortal";
+import Logo from "../assets/Logo.png"
 
 const Modals = () => {
   const [isOpenModal1, openModal1, closeModal1] = useModal(false);
@@ -66,16 +67,18 @@ const Modals = () => {
       <button onClick={openModalSong}>Modal Song</button>
       <Modal isOpen={isOpenSong} closeModal={closeModalSong}>
         <SongSearch />
-        (forth section) <br /> <br />
+        <b>(forth section)</b> <br /> <br />
       </Modal>
       <button onClick={openModalPortal}>Modal in Portal</button>
       <ModalPortal isOpen={isOpenPortal} closeModal={closeModalPortal}>
+        <div style={{textAlign:"center"}} >
         <h3>Portal Modal</h3>
         <p>
           This is the content of a modal that load in another node of the DOM
           thanks to a React Portal
         </p>
-        <img src="https://placeimg.com/400/400/tech" alt="Tech" />
+        <img src={Logo} alt="Hawaiian-Fox" />
+        </div>
       </ModalPortal>
     </div>
   );
